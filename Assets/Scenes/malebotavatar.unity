@@ -2214,8 +2214,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1334362682}
-        m_TargetAssemblyTypeName: ContemptButton, Assembly-CSharp
-        m_MethodName: Onclick
+        m_TargetAssemblyTypeName: ButtonClick, Assembly-CSharp
+        m_MethodName: Contemptclick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2272,7 +2272,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1334362677}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e738ef6e97541948919ac28f404af19, type: 3}
+  m_Script: {fileID: 11500000, guid: 943245902f1037a4e89765f665827e82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1352652454
@@ -2905,7 +2905,7 @@ GameObject:
   - component: {fileID: 1635362790}
   - component: {fileID: 1635362789}
   - component: {fileID: 1635362788}
-  - component: {fileID: 1635362787}
+  - component: {fileID: 1635362791}
   m_Layer: 5
   m_Name: angerbutton
   m_TagString: Untagged
@@ -2934,18 +2934,6 @@ RectTransform:
   m_AnchoredPosition: {x: -800, y: 500}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1635362787
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1635362785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ebb2f879f53f9344b58f54a7fa11b4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1635362788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2990,9 +2978,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1635362787}
-        m_TargetAssemblyTypeName: AngerButton, Assembly-CSharp
-        m_MethodName: Onclick
+      - m_Target: {fileID: 1635362791}
+        m_TargetAssemblyTypeName: ButtonClick, Assembly-CSharp
+        m_MethodName: Angerclick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3040,6 +3028,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1635362785}
   m_CullTransparentMesh: 1
+--- !u!114 &1635362791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635362785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 943245902f1037a4e89765f665827e82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1688003881
 GameObject:
   m_ObjectHideFlags: 0
