@@ -1,100 +1,88 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+
 
 public class ButtonClick : MonoBehaviour
 {
-    private Transition transition;
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+    private Transition _transition;
+    
     public void Disgustclick()
     {
-        transition = GameObject.Find("malebot").GetComponent<Transition>();
-        transition.Disgust();
+        _transition = GameObject.Find("malebot").GetComponent<Transition>();
+        _transition.Disgust();
     }
     public void Fearclick()
     {
-        transition = GameObject.Find("malebot").GetComponent<Transition>();
-        transition.Fear();
+        _transition = GameObject.Find("malebot").GetComponent<Transition>();
+        _transition.Fear();
     }
     public void Gratitudetclick()
     {
-        transition = GameObject.Find("malebot").GetComponent<Transition>();
-        transition.Gratitude();
+        _transition = GameObject.Find("malebot").GetComponent<Transition>();
+        _transition.Gratitude();
     }
     public void Guiltclick()
     {
-        transition = GameObject.Find("malebot").GetComponent<Transition>();
-        transition.Guilt();
+        _transition = GameObject.Find("malebot").GetComponent<Transition>();
+        _transition.Guilt();
     }
     public void Jealousyclick()
     {
-        transition = GameObject.Find("malebot").GetComponent<Transition>();
-        transition.Jealousy();
+        _transition = GameObject.Find("malebot").GetComponent<Transition>();
+        _transition.Jealousy();
     }
     public void Joytclick()
     {
-        transition = GameObject.Find("malebot").GetComponent<Transition>();
-        transition.Joy();
+        _transition = GameObject.Find("malebot").GetComponent<Transition>();
+        _transition.Joy();
     }
     public void Prideclick()
     {
-        transition = GameObject.Find("malebot").GetComponent<Transition>();
-        transition.Pride();
+        _transition = GameObject.Find("malebot").GetComponent<Transition>();
+        _transition.Pride();
     }
     public void Sadnessclick()
     {
-        transition = GameObject.Find("malebot").GetComponent<Transition>();
-        transition.Sadness();
+        _transition = GameObject.Find("malebot").GetComponent<Transition>();
+        _transition.Sadness();
     }
     public void Shametclick()
     {
-        transition = GameObject.Find("malebot").GetComponent<Transition>();
-        transition.Shame();
+        _transition = GameObject.Find("malebot").GetComponent<Transition>();
+        _transition.Shame();
     }
     public void Surpriseclick()
     {
-        transition = GameObject.Find("malebot").GetComponent<Transition>();
-        transition.Surprise();
+        _transition = GameObject.Find("malebot").GetComponent<Transition>();
+        _transition.Surprise();
     }
     public void Neutralclick()
     {
-        transition = GameObject.Find("malebot").GetComponent<Transition>();
-        transition.Neutral();
+        _transition = GameObject.Find("malebot").GetComponent<Transition>();
+        _transition.Neutral();
     }
     public void Highclick()
     {
-        transition = GameObject.Find("malebot").GetComponent<Transition>();
-        transition.High();
+        _transition = GameObject.Find("malebot").GetComponent<Transition>();
+        _transition.High();
     }
     public void Middleclick()
     {
-        transition = GameObject.Find("malebot").GetComponent<Transition>();
-        transition.Middle();
+        _transition = GameObject.Find("malebot").GetComponent<Transition>();
+        _transition.Middle();
     }
     public void Lowclick()
     {
-        transition = GameObject.Find("malebot").GetComponent<Transition>();
-        transition.Low();
+        _transition = GameObject.Find("malebot").GetComponent<Transition>();
+        _transition.Low();
     }
     public void Angerclick()
     {
-        transition = GameObject.Find("malebot").GetComponent<Transition>();
-        transition.Anger();
+        _transition = GameObject.Find("malebot").GetComponent<Transition>();
+        _transition.Anger();
     }
     public void Contemptclick()
     {
-        transition = GameObject.Find("malebot").GetComponent<Transition>();
-        transition.Contempt();
+        _transition = GameObject.Find("malebot").GetComponent<Transition>();
+        _transition.Contempt();
     }
 }
