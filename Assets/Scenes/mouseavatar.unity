@@ -210,7 +210,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 35541834}
         m_TargetAssemblyTypeName: mouseclick, Assembly-CSharp
-        m_MethodName: Gratitudetclick
+        m_MethodName: GratitudeClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1005,7 +1005,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 707977636}
         m_TargetAssemblyTypeName: mouseclick, Assembly-CSharp
-        m_MethodName: Joytclick
+        m_MethodName: JoyClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1270,7 +1270,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 881168880}
         m_TargetAssemblyTypeName: mouseclick, Assembly-CSharp
-        m_MethodName: Jealousyclick
+        m_MethodName: JealousyClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1663,7 +1663,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1230293654}
         m_TargetAssemblyTypeName: mouseclick, Assembly-CSharp
-        m_MethodName: Fearclick
+        m_MethodName: FearClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1890,7 +1890,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1322448663}
         m_TargetAssemblyTypeName: mouseclick, Assembly-CSharp
-        m_MethodName: Surpriseclick
+        m_MethodName: SurpriseClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2117,7 +2117,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1334362682}
         m_TargetAssemblyTypeName: mouseclick, Assembly-CSharp
-        m_MethodName: Contemptclick
+        m_MethodName: ContemptClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2344,7 +2344,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1356829390}
         m_TargetAssemblyTypeName: mouseclick, Assembly-CSharp
-        m_MethodName: Disgustclick
+        m_MethodName: DisgustClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2796,7 +2796,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1549139362}
         m_TargetAssemblyTypeName: mouseclick, Assembly-CSharp
-        m_MethodName: Highclick
+        m_MethodName: HighClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2943,7 +2943,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1635362791}
         m_TargetAssemblyTypeName: mouseclick, Assembly-CSharp
-        m_MethodName: Angerclick
+        m_MethodName: AngerClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3090,7 +3090,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1688003887}
         m_TargetAssemblyTypeName: mouseclick, Assembly-CSharp
-        m_MethodName: Neutralclick
+        m_MethodName: NeutralClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3317,7 +3317,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1719580883}
         m_TargetAssemblyTypeName: mouseclick, Assembly-CSharp
-        m_MethodName: Lowclick
+        m_MethodName: LowClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3464,7 +3464,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1776526727}
         m_TargetAssemblyTypeName: mouseclick, Assembly-CSharp
-        m_MethodName: Middleclick
+        m_MethodName: MiddleClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3611,7 +3611,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1803695885}
         m_TargetAssemblyTypeName: mouseclick, Assembly-CSharp
-        m_MethodName: Prideclick
+        m_MethodName: PrideClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3758,7 +3758,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1859298565}
         m_TargetAssemblyTypeName: mouseclick, Assembly-CSharp
-        m_MethodName: Guiltclick
+        m_MethodName: GuiltClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3905,7 +3905,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1882312040}
         m_TargetAssemblyTypeName: mouseclick, Assembly-CSharp
-        m_MethodName: Sadnessclick
+        m_MethodName: SadnessClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4214,7 +4214,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2069398656}
         m_TargetAssemblyTypeName: mouseclick, Assembly-CSharp
-        m_MethodName: Shametclick
+        m_MethodName: ShameClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

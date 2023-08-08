@@ -1,121 +1,118 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Transition : MonoBehaviour
 {
-    Animator animator;
-    private Text EText;
-    private Text LText;
-    // Start is called before the first frame update
-    void Start()
-    {
-        animator = GetComponent<Animator>();
-    }
+    private Animator _animator;
+    private Text _eText;
+    private Text _lText;
 
-    // Update is called once per frame
-    void Update()
+    private static readonly int Trans = Animator.StringToHash("trans");
+    private static readonly int Level = Animator.StringToHash("level");
+
+    // Start is called before the first frame update
+    private void Start()
     {
-        
+        _animator = GetComponent<Animator>();
     }
+    
     public void Neutral()
     {
-        animator.SetInteger("trans", 0);
-        animator.SetInteger("level", 2);
-        this.EText = GameObject.Find("EmoText").GetComponent<Text>();
-        EText.text = "Neutral";
-        this.LText = GameObject.Find("LevelText").GetComponent<Text>();
-        LText.text = "Middle";
+        _animator.SetInteger(Trans, 0);
+        _animator.SetInteger(Level, 2);
+        this._eText = GameObject.Find("EmoText").GetComponent<Text>();
+        _eText.text = "Neutral";
+        this._lText = GameObject.Find("LevelText").GetComponent<Text>();
+        _lText.text = "Middle";
     }
     public void Anger()
     {
-        animator.SetInteger("trans", 1);
-        this.EText = GameObject.Find("EmoText").GetComponent<Text>();
-        EText.text = "Anger";
+        _animator.SetInteger(Trans, 1);
+        this._eText = GameObject.Find("EmoText").GetComponent<Text>();
+        _eText.text = "Anger";
     }
     public void Contempt()
     {
-        animator.SetInteger("trans", 2);
-        this.EText = GameObject.Find("EmoText").GetComponent<Text>();
-        EText.text = "Contempt";
+        _animator.SetInteger(Trans, 2);
+        this._eText = GameObject.Find("EmoText").GetComponent<Text>();
+        _eText.text = "Contempt";
     }
     public void Disgust()
     {
-        animator.SetInteger("trans", 3);
-        this.EText = GameObject.Find("EmoText").GetComponent<Text>();
-        EText.text = "Disgust";
+        _animator.SetInteger(Trans, 3);
+        this._eText = GameObject.Find("EmoText").GetComponent<Text>();
+        _eText.text = "Disgust";
     }
     public void Fear()
     {
-        animator.SetInteger("trans", 4);
-        this.EText = GameObject.Find("EmoText").GetComponent<Text>();
-        EText.text = "Fear";
+        _animator.SetInteger(Trans, 4);
+        this._eText = GameObject.Find("EmoText").GetComponent<Text>();
+        _eText.text = "Fear";
     }
     public void Gratitude()
     {
-        animator.SetInteger("trans", 5);
-        this.EText = GameObject.Find("EmoText").GetComponent<Text>();
-        EText.text = "Gratitude";
+        _animator.SetInteger(Trans, 5);
+        this._eText = GameObject.Find("EmoText").GetComponent<Text>();
+        _eText.text = "Gratitude";
     }
     public void Guilt()
     {
-        animator.SetInteger("trans", 6);
-        this.EText = GameObject.Find("EmoText").GetComponent<Text>();
-        EText.text = "Guilt";
+        _animator.SetInteger(Trans, 6);
+        this._eText = GameObject.Find("EmoText").GetComponent<Text>();
+        _eText.text = "Guilt";
     }
     public void Jealousy()
     {
-        animator.SetInteger("trans", 7);
-        this.EText = GameObject.Find("EmoText").GetComponent<Text>();
-        EText.text = "Jealousy";
+        _animator.SetInteger(Trans, 7);
+        this._eText = GameObject.Find("EmoText").GetComponent<Text>();
+        _eText.text = "Jealousy";
     }
     public void Joy()
     {
-        animator.SetInteger("trans", 8);
-        this.EText = GameObject.Find("EmoText").GetComponent<Text>();
-        EText.text = "Joy";
+        _animator.SetInteger(Trans, 8);
+        this._eText = GameObject.Find("EmoText").GetComponent<Text>();
+        _eText.text = "Joy";
     }
     public void Pride()
     {
-        animator.SetInteger("trans", 9);
-        this.EText = GameObject.Find("EmoText").GetComponent<Text>();
-        EText.text = "Pride";
+        _animator.SetInteger(Trans, 9);
+        this._eText = GameObject.Find("EmoText").GetComponent<Text>();
+        _eText.text = "Pride";
     }
     public void Sadness()
     {
-        animator.SetInteger("trans", 10);
-        this.EText = GameObject.Find("EmoText").GetComponent<Text>();
-        EText.text = "Sadness";
+        _animator.SetInteger(Trans, 10);
+        this._eText = GameObject.Find("EmoText").GetComponent<Text>();
+        _eText.text = "Sadness";
     }
     public void Shame()
     {
-        animator.SetInteger("trans", 11);
-        this.EText = GameObject.Find("EmoText").GetComponent<Text>();
-        EText.text = "Shame";
+        _animator.SetInteger(Trans, 11);
+        this._eText = GameObject.Find("EmoText").GetComponent<Text>();
+        _eText.text = "Shame";
     }
     public void Surprise()
     {
-        animator.SetInteger("trans", 12);
-        this.EText = GameObject.Find("EmoText").GetComponent<Text>();
-        EText.text = "Surprise";
+        _animator.SetInteger(Trans, 12);
+        this._eText = GameObject.Find("EmoText").GetComponent<Text>();
+        _eText.text = "Surprise";
     }
     public void High()
     {
-        animator.SetInteger("level", 3);
-        this.LText = GameObject.Find("LevelText").GetComponent<Text>();
-        LText.text = "High";
+        _animator.SetInteger(Level, 3);
+        this._lText = GameObject.Find("LevelText").GetComponent<Text>();
+        _lText.text = "High";
     }
     public void Middle()
     {
-        animator.SetInteger("level", 2);
-        this.LText = GameObject.Find("LevelText").GetComponent<Text>();
-        LText.text = "Middle";
+        _animator.SetInteger(Level, 2);
+        this._lText = GameObject.Find("LevelText").GetComponent<Text>();
+        _lText.text = "Middle";
     }
     public void Low()
     {
-        animator.SetInteger("level", 1);
-        this.LText = GameObject.Find("LevelText").GetComponent<Text>();
-        LText.text = "Low";
+        _animator.SetInteger(Level, 1);
+        this._lText = GameObject.Find("LevelText").GetComponent<Text>();
+        _lText.text = "Low";
     }
 }

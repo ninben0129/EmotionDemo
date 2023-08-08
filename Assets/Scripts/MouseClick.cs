@@ -1,10 +1,10 @@
 using UnityEngine;
 
 
-public class ButtonClick : MonoBehaviour
+public class MouseClick : MonoBehaviour
 {
     private Transition _transition;
-    private const string Avatar = "malebot";
+    private const string Avatar = "mouse";
 
     public void DisgustClick()
     {
