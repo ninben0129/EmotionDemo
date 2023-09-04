@@ -27,11 +27,20 @@ public class SetPosition : MonoBehaviour
             transform1.position = _initposition;
             transform1.localEulerAngles = _initrotate;
         }
-        if (Math.Abs(stateInfo.normalizedTime) < 0.05)
+        /*
+         if (Math.Abs(stateInfo.normalizedTime) < 0.01)
         {
             var transform1 = transform;
             transform1.position = _initposition;
             transform1.localEulerAngles = _initrotate;
         }
+        */
+    }
+
+    void Reset()
+    {
+        var transform1 = transform;
+        transform1.position = _initposition;
+        transform1.localEulerAngles = _initrotate;
     }
 }
