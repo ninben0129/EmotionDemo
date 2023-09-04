@@ -5,7 +5,9 @@ public class SetPosition : MonoBehaviour
 {
     private Animator _animator;
     private Vector3 _initposition;
+
     private Vector3 _initrotate;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,8 +20,14 @@ public class SetPosition : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        AnimatorStateInfo stateInfo = _animator.GetCurrentAnimatorStateInfo (0);
-        if (Math.Abs(stateInfo.normalizedTime - 1.0f) < 0.01)
+        AnimatorStateInfo stateInfo = _animator.GetCurrentAnimatorStateInfo(0);
+        if (Math.Abs(stateInfo.normalizedTime - 1.0) < 0.01)
+        {
+            var transform1 = transform;
+            transform1.position = _initposition;
+            transform1.localEulerAngles = _initrotate;
+        }
+        if (Math.Abs(stateInfo.normalizedTime) < 0.05)
         {
             var transform1 = transform;
             transform1.position = _initposition;
