@@ -15,8 +15,11 @@ using System.IO;
 public static class AnimatorCreator
 {
     [MenuItem("Tools/Animation/Create Animator")]
-    public static void Create()
+    public static void CreateAnimator()
     {
+        List<string> levelList = new List<string>() { "L", "M", "H" };
+
+
         // creates the controller
         var controller =
             AnimatorController.CreateAnimatorControllerAtPath("Assets/Animator Controller/test.controller");
@@ -47,5 +50,6 @@ public static class AnimatorCreator
 
         //save assets
         AssetDatabase.SaveAssets();
+        AssetDatabase.Refresh();
     }
 }

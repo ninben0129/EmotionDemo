@@ -13,7 +13,6 @@ public class Copy
         string clipName = "Armature|2022-03-12_CK_anger_1_H_remap";
         // AnimationClipの出力先
         string exportPath = "Assets/Animation/new/anger_H.anim";
-
         string tempExportedClip = "Assets/Animation/new/tempClip.anim";
 
         // AnimationClipの取得
@@ -27,11 +26,11 @@ public class Copy
         AssetDatabase.CreateAsset (copyClip, tempExportedClip);
 
         // AnimationClipのコピー（固定化したuuid）
-        File.Copy (tempExportedClip, exportPath, true);
-        File.Delete (tempExportedClip);
+        //File.Copy (tempExportedClip, exportPath, true);
+        //File.Delete (tempExportedClip);
 
         // AssetDatabaseリフレッシュ
         AssetDatabase.SaveAssets();
-        AssetDatabase.Refresh ();
+        AssetDatabase.Refresh();
     }
 }
