@@ -1,8 +1,6 @@
 using UnityEngine;
 using UnityEditor;
-using System.IO;
-
-public class Copy
+public class DrawAnimationClip
 {
     [MenuItem("Tools/Animation/Copy")]
     static void AssetCopy ()
@@ -23,7 +21,7 @@ public class Copy
 	
         // AnimationClipをコピーして出力(ユニークなuuid)
         var copyClip = Object.Instantiate (originalClip);
-        AssetDatabase.CreateAsset (copyClip, tempExportedClip);
+        AssetDatabase.CreateAsset (copyClip, exportPath);
 
         // AnimationClipのコピー（固定化したuuid）
         //File.Copy (tempExportedClip, exportPath, true);
