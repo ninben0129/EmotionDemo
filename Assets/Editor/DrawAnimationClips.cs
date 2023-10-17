@@ -11,7 +11,7 @@ public class DrawAnimationClip
         string clipName = "Armature|2022-03-12_CK_anger_1_H_remap";
         // AnimationClipの出力先
         string exportPath = "Assets/Animation/new/anger_H.anim";
-        string tempExportedClip = "Assets/Animation/new/tempClip.anim";
+        // string tempExportedClip = "Assets/Animation/new/tempClip.anim";
 
         // AnimationClipの取得
         var animations = AssetDatabase.LoadAllAssetsAtPath (fbxPath);
