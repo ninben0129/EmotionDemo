@@ -3,10 +3,11 @@ using UnityEditor;
 using System;
 using System.Collections.Generic;
 using System.IO;
+
 public class DrawAnimationClipAuto
 {
     [MenuItem("Tools/Animation/AutoCopy")]
-    static void AssetAutoCopy ()
+    static void AssetAutoCopy()
     {
         // AnimationClipを持つFBXの入っているファイルのパス
         string folderPath = "Assets/Animation/ChibaKaito";
@@ -21,6 +22,7 @@ public class DrawAnimationClipAuto
             AssetCopy(filePath);
         }
     }
+
     static List<string> GetFbxFiles(string directoryPath)
     {
         List<string> fbxFiles = new List<string>();
@@ -40,6 +42,7 @@ public class DrawAnimationClipAuto
 
         return fbxFiles;
     }
+
     static List<string> GetFbxFiles2(string directoryPath)
     {
         List<string> fbxFiles = new List<string>();
@@ -65,6 +68,7 @@ public class DrawAnimationClipAuto
 
         return fbxFiles;
     }
+
     static string GetFileNameWithoutExtension(string filePath)
     {
         try
@@ -79,29 +83,27 @@ public class DrawAnimationClipAuto
             return null;
         }
     }
-    static void AssetCopy (string fbxPath)
+
+    static void AssetCopy(string fbxPath)
     {
         string filename = GetFileNameWithoutExtension(fbxPath);
         // AnimationClipのファイル名
-        string clipName = filename+"|"+filename;
+        string clipName = filename + "|" + filename;
         // AnimationClipの出力先
-        string exportPath = Path.GetDirectoryName(fbxPath) + "/Anim/"+filename+".anim";
+        string exportPath = Path.GetDirectoryName(fbxPath) + "/Anim/" + filename + ".anim";
 
         // AnimationClipの取得
-        var animations = AssetDatabase.LoadAllAssetsAtPath (fbxPath);
-        var originalClip = System.Array.Find<UnityEngine.Object> (animations, item =>
+        var animations = AssetDatabase.LoadAllAssetsAtPath(fbxPath);
+        var originalClip = System.Array.Find<UnityEngine.Object>(animations, item =>
             item is AnimationClip && item.name == clipName
         );
-	
+
         // AnimationClipをコピーして出力(ユニークなuuid)
-        var copyClip = UnityEngine.Object.Instantiate (originalClip);
-        AssetDatabase.CreateAsset (copyClip, exportPath);
-        
+        var copyClip = UnityEngine.Object.Instantiate(originalClip);
+        AssetDatabase.CreateAsset(copyClip, exportPath);
+
         // AssetDatabaseリフレッシュ
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh();
     }
-    
-    
-    
 }
