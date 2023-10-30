@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class ExtractAnimationClip
 {
-    [MenuItem("Tools/Animation/ExtractAnimationClip")]
+    [MenuItem("Animation/ExtractAnimationClip")]
     static void AssetCopy()
     {
         List<string> levelList = new List<string>() { "L", "M", "H" };
@@ -13,33 +13,72 @@ public class ExtractAnimationClip
             "neutral", "anger", "contempt", "disgust", "fear", "gratitude", "guilt",
             "jealousy", "joy", "pride", "sadness", "shame", "surprise"
         };
+        string rootpath = "Assets/Animation/main/";
+        int person = 2;
+        string folderpath = rootpath + person.ToString("00");
 
-        // AnimationClipを持つFBXのパス
-        string fbxPath = "Assets/Animation/new/anger_H2.fbx";
-        // AnimationClipのファイル名
-        //string clipName = "Armature|2022-03-12_CK_anger_1_H_remap";
-        // AnimationClipの出力先
-        string exportPath = "Assets/Animation/new/anger_H.anim";
-        // string tempExportedClip = "Assets/Animation/new/tempClip.anim";
+        string[] guids = AssetDatabase.FindAssets("t:Model", new string[] { folderpath });
+        for (int sce = 1; sce <= 3; sce++)
+        {
+            string temp1 = "neutral_" + sce.ToString() + ".fbx";
+            bool flag1 = false;
+            foreach (string guid in guids)
+            {
+                string filepath = UnityEditor.AssetDatabase.GUIDToAssetPath(guid);
+                if (filepath.Contains(temp1))
+                {
+                    flag1 = true;
+                    var animations = AssetDatabase.LoadAllAssetsAtPath(filepath);
+                    var originalClip = System.Array.Find<Object>(animations, item =>
+                        item is AnimationClip
+                    );
+                    string exportPath = folderpath + "/" + person.ToString("00")+"_" + "neutral_" + sce.ToString() + ".anim";
+                    var copyClip = Object.Instantiate(originalClip);
+                    AssetDatabase.CreateAsset(copyClip, exportPath);
+                    //AssetDatabase.CreateAsset(originalClip, exportPath);
+                    AssetDatabase.SaveAssets();
+                    AssetDatabase.Refresh();
+                }
+            }
 
-        // AnimationClipの取得
-        var animations = AssetDatabase.LoadAllAssetsAtPath(fbxPath);
-        //var originalClip = System.Array.Find<Object> (animations, item =>
-        //    item is AnimationClip && item.name == clipName
-        //);
-        var originalClip = System.Array.Find<Object>(animations, item =>
-            item is AnimationClip
-        );
+            if (flag1 == false)
+            {
+                Debug.Log(temp1+" cant find");
+            }
 
-        // AnimationClipをコピーして出力(ユニークなuuid)
-        var copyClip = Object.Instantiate(originalClip);
-        AssetDatabase.CreateAsset(copyClip, exportPath);
+            for (int emo = 1; emo <= 12; emo++)
+            {
+                for (int lev = 0; lev <= 2; lev++)
+                {
+                    string temp2 = emotionList[emo] + "_" + sce.ToString() + "_" + levelList[lev] + ".fbx";
+                    bool flag2 = false;
+                    foreach (string guid in guids)
+                    {
+                        string filepath = UnityEditor.AssetDatabase.GUIDToAssetPath(guid);
+                        if (filepath.Contains(temp2))
+                        {
+                            flag2 = true;
+                            var animations = AssetDatabase.LoadAllAssetsAtPath(filepath);
+                            var originalClip = System.Array.Find<Object>(animations, item =>
+                                item is AnimationClip
+                            );
+                            string exportPath = folderpath + "/" + person.ToString("00")+"_" + emotionList[emo] + "_" + sce.ToString() +
+                                                "_" + levelList[lev] + ".anim";
+                            var copyClip = Object.Instantiate(originalClip);
+                            AssetDatabase.CreateAsset(copyClip, exportPath);
+                            //AssetDatabase.CreateAsset(originalClip, exportPath);
+                            AssetDatabase.SaveAssets();
+                            AssetDatabase.Refresh();
+                        }
+                    }
 
-        // AnimationClipのコピー（固定化したuuid）
-        //File.Copy (tempExportedClip, exportPath, true);
-        //File.Delete (tempExportedClip);
-
-        // AssetDatabaseリフレッシュ
+                    if (flag2 == false)
+                    {
+                        Debug.Log(temp2+" can't find");
+                    }
+                }
+            }
+        }
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh();
     }
