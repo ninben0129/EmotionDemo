@@ -14,7 +14,7 @@ public class ExtractAnimationClip
             "jealousy", "joy", "pride", "sadness", "shame", "surprise"
         };
         string rootpath = "Assets/Animation/main/";
-        int person = 2;
+        int person = 3;
         string folderpath = rootpath + person.ToString("00");
 
         string[] guids = AssetDatabase.FindAssets("t:Model", new string[] { folderpath });
