@@ -36,8 +36,8 @@ public class ExtractAnimationClip
                     var copyClip = Object.Instantiate(originalClip);
                     AssetDatabase.CreateAsset(copyClip, exportPath);
                     //AssetDatabase.CreateAsset(originalClip, exportPath);
-                    AssetDatabase.SaveAssets();
-                    AssetDatabase.Refresh();
+                    //AssetDatabase.SaveAssets();
+                    //AssetDatabase.Refresh();
                 }
             }
 
@@ -67,8 +67,8 @@ public class ExtractAnimationClip
                             var copyClip = Object.Instantiate(originalClip);
                             AssetDatabase.CreateAsset(copyClip, exportPath);
                             //AssetDatabase.CreateAsset(originalClip, exportPath);
-                            AssetDatabase.SaveAssets();
-                            AssetDatabase.Refresh();
+                            //AssetDatabase.SaveAssets();
+                            //AssetDatabase.Refresh();
                         }
                     }
 
