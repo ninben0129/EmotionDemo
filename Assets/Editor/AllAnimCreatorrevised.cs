@@ -12,9 +12,9 @@ using System.IO;
 /// <summary>
 /// Animator / Animation Clip を自動生成
 /// </summary>
-public static class AllAnimCreator
+public static class AllAnimCreatorrevised
 {
-    [MenuItem("tool/animcreate")]
+    [MenuItem("tool/animcreaterev")]
     public static void CreateAnimator()
     {
         List<string> levelList = new List<string>() { "L", "M", "H" };
@@ -25,24 +25,16 @@ public static class AllAnimCreator
         };
         string rootpath = "Assets/Animation/main/";
         
-        // creates the controller
-        var controller =
-            AnimatorController.CreateAnimatorControllerAtPath("Assets/Animator Controller/allmotion.controller");
-
-        //add parameters
-        controller.AddParameter("trans", AnimatorControllerParameterType.Int);
-        controller.AddParameter("level", AnimatorControllerParameterType.Int);
-        controller.AddParameter("scenario",AnimatorControllerParameterType.Int);
-        controller.AddParameter("person",AnimatorControllerParameterType.Int);
-
-        //add statemachine
-        var stateMachine = controller.layers[0].stateMachine;
 
 
 
-        for (int person = 1; person <= 10; person++)
+
+        for (int person = 11; person <= 97; person++)
         {
-
+            //controller
+            AnimatorController controller = AssetDatabase.LoadAssetAtPath("Assets/Animator Controller/allmotion.controller", typeof(AnimatorController)) as AnimatorController;
+            //statemachine
+            var stateMachine = controller.layers[0].stateMachine;
             string folderpath = rootpath + person.ToString("00");
             string[] guids = AssetDatabase.FindAssets("t:Model", new string[] { folderpath });
             for (int sce = 1; sce <= 3; sce++)
