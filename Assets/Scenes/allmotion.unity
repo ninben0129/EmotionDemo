@@ -7643,7 +7643,7 @@ Animator:
   m_GameObject: {fileID: 2091406489}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: efe69c8c7e3b7ee429086f52e055afb6, type: 3}
-  m_Controller: {fileID: 9100000, guid: 13292f903fd628b48861e72b6f0f5e58, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0b59a764ea2ace8488d26d849b87c65a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -7974,7 +7974,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ChibaKaito
+  m_Text: 01
 --- !u!222 &2146549108
 CanvasRenderer:
   m_ObjectHideFlags: 0
