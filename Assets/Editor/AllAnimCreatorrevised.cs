@@ -102,7 +102,10 @@ public static class AllAnimCreatorrevised
                     }
                 }
             }
+            AssetDatabase.SaveAssets();
+            AssetDatabase.Refresh();
         }
+        
 
 
 
