@@ -7,10 +7,12 @@ public class Transition : MonoBehaviour
     private Text _eText;
     private Text _lText;
     private Text _sText;
+    private Text _pText;
 
     private static readonly int Trans = Animator.StringToHash("trans");
     private static readonly int Level = Animator.StringToHash("level");
     private static readonly int Scenario = Animator.StringToHash("scenario");
+    private static readonly int Person = Animator.StringToHash("person");
 
     // Start is called before the first frame update
     private void Start()
@@ -152,5 +154,13 @@ public class Transition : MonoBehaviour
         _animator.SetInteger(Scenario, 3);
         this._sText = GameObject.Find("ScenarioText").GetComponent<Text>();
         _sText.text = "Scenario3";
+    }
+
+    public void SetPerson(int person)
+    {
+        _animator.SetInteger(Person,person);
+        this._pText = GameObject.Find("PersonText").GetComponent<Text>();
+        _pText.text = person.ToString("00");
+        
     }
 }
