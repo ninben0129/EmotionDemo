@@ -1,10 +1,14 @@
 using UnityEngine;
-
+using UnityEngine.UI;
+using System;
+using TMPro;
 
 public class ButtonClick : MonoBehaviour
 {
     private Transition _transition;
     private const string Avatar = "malebot";
+    TMP_InputField _inputField;
+    public Text text;
 
     public void DisgustClick()
     {
@@ -118,5 +122,14 @@ public class ButtonClick : MonoBehaviour
     {
         _transition = GameObject.Find(Avatar).GetComponent<Transition>();
         _transition.Scenario3();
+    }
+
+    public void PersonSet()
+    {
+        _inputField = GameObject.Find("inputnum").GetComponent<TMP_InputField>();
+        int person;
+        int.TryParse(_inputField.text, out person);
+        _transition = GameObject.Find(Avatar).GetComponent<Transition>();
+        _transition.SetPerson(person);
     }
 }

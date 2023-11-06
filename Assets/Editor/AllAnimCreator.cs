@@ -27,7 +27,7 @@ public static class AllAnimCreator
         
         // creates the controller
         var controller =
-            AnimatorController.CreateAnimatorControllerAtPath("Assets/Animator Controller/allperson.controller");
+            AnimatorController.CreateAnimatorControllerAtPath("Assets/Animator Controller/allmotion.controller");
 
         //add parameters
         controller.AddParameter("trans", AnimatorControllerParameterType.Int);
@@ -40,7 +40,7 @@ public static class AllAnimCreator
 
 
 
-        for (int person = 1; person <= 1; person++)
+        for (int person = 1; person <= 10; person++)
         {
 
             string folderpath = rootpath + person.ToString("00");
@@ -57,7 +57,7 @@ public static class AllAnimCreator
                         flag1 = true;
                         var animations = AssetDatabase.LoadAllAssetsAtPath(filepath);
                         var animClip = System.Array.Find<Object>(animations, item =>
-                            item is AnimationClip
+                            item is AnimationClip && item.name.Contains("preview")==false
                         ) as AnimationClip;
                         var state_n1 = controller.AddMotion(animClip);
                         var exittransition1 = state_n1.AddExitTransition();
@@ -89,7 +89,7 @@ public static class AllAnimCreator
                                 flag2 = true;
                                 var animations = AssetDatabase.LoadAllAssetsAtPath(filepath);
                                 var animClip = System.Array.Find<Object>(animations, item =>
-                                    item is AnimationClip
+                                    item is AnimationClip && item.name.Contains("preview")==false
                                 ) as AnimationClip;
                                 var state_n1 = controller.AddMotion(animClip);
                                 var exittransition1 = state_n1.AddExitTransition();

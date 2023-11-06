@@ -13,7 +13,7 @@ public class animtest : MonoBehaviour
         AnimatorController controller = AssetDatabase.LoadAssetAtPath(animatorControllerPath, typeof(AnimatorController)) as AnimatorController;
         var animations = AssetDatabase.LoadAllAssetsAtPath(fbxpath);
         var animationClip = System.Array.Find<Object>(animations, item =>
-            item is AnimationClip
+            item is AnimationClip && item.name.Contains("preview")==false
         ) as AnimationClip;
 
         //add statemachine
