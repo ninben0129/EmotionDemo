@@ -6,6 +6,7 @@ using TMPro;
 public class ButtonClick : MonoBehaviour
 {
     private Transition _transition;
+    private ScenarioClient _scenarioClient;
     private const string Avatar = "malebot";
     TMP_InputField _inputField;
     public Text text;
@@ -131,5 +132,11 @@ public class ButtonClick : MonoBehaviour
         int.TryParse(_inputField.text, out person);
         _transition = GameObject.Find(Avatar).GetComponent<Transition>();
         _transition.SetPerson(person);
+    }
+
+    public void ScenarioLoad()
+    {
+        _scenarioClient=GameObject.Find(Avatar).GetComponent<ScenarioClient>();
+        _scenarioClient.Send();
     }
 }

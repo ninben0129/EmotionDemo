@@ -37,7 +37,7 @@ public class SetPosition2 : MonoBehaviour
         */
     }
 
-    void Reset()
+    public void LocateReset()
     {
         var transform1 = transform;
         transform1.position = _initposition;
